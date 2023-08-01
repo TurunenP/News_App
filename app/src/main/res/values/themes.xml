@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <!-- Define your custom theme based on the Material.Light theme -->
+    <!-- <style name="theme.news_app" parent="android:theme.material.light.noactionbar">-->
+    <style name="Theme.News_App" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme attributes here -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryDark">@color/purple_700</item>
+        <item name="colorAccent">@color/teal_200</item>
+        <!-- You can add more theme attributes as needed -->
+
+        <!-- Optionally, you can override other default attributes -->
+        <!-- For example, to change the status bar color -->
+        <item name="android:statusBarColor">@color/purple_700</item>
+    </style>
+</resources>
+
+
+
+
+
