@@ -4,7 +4,7 @@ class ApiResponse {
     data class ApiResponse(
         val status: String?,
         val totalResults: Int,
-        val articles: List<NewsHeadlines.NewsHealines>
+        val articles: List<NewsHeadlines>
     )
 
 }

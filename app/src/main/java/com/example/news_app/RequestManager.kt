@@ -20,7 +20,7 @@ class RequestManager(private val context: Context) {
         .addConverterFactory(GsonConverterFactory.create())
         .build()
 
-    fun getNewsHeadlines(listener: FetchDataListener<List<NewsHeadlines.NewsHealines>>,
+    fun getNewsHeadlines(listener: FetchDataListener<List<NewsHeadlines>>,
                          category: String, query: String) {
         val callNewsApi = retrofit.create(CallNewsApi::class.java)
         val call = callNewsApi.callHeadlines("us", category, query, context.getString(R.string.api_key))

@@ -22,8 +22,8 @@ class MainActivity : AppCompatActivity() {
 
         val requestManager = RequestManager(this)
         requestManager.getNewsHeadlines(object :
-            FetchDataListener<List<NewsHeadlines.NewsHeadlines>> {
-            override fun onFetchData(response: List<NewsHeadlines.NewsHeadlines>?, message: String) {
+            FetchDataListener<List<NewsHeadlines>> {
+            override fun onFetchData(response: List<NewsHeadlines>?, message: String) {
                 // Handle the successful response here
                 response?.let { articles ->
                     for (article in articles) {

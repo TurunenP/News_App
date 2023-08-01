@@ -8,11 +8,11 @@ import com.example.news_app.Models.NewsHeadlines
 import com.squareup.picasso.Picasso
 import com.example.news_app.databinding.ListItemsBinding
 
-class CustomAdapter(private val context: Context, private var headlines: List<NewsHeadlines.NewsHealines>) :
+class CustomAdapter(private val context: Context, private var headlines: List<NewsHeadlines>) :
     RecyclerView.Adapter<CustomAdapter.ViewHolder>() {
 
     inner class ViewHolder(private val binding: ListItemsBinding) : RecyclerView.ViewHolder(binding.root) {
-        fun bind(newsHealines: NewsHeadlines.NewsHealines) {
+        fun bind(newsHealines: NewsHeadlines) {
             binding.textTitle.text = newsHealines.title
             binding.textSource.text = newsHealines.source?.name ?: "Unknown Source"
 
@@ -35,7 +35,7 @@ class CustomAdapter(private val context: Context, private var headlines: List<Ne
         return headlines.size
     }
 
-    fun updateData(newData: List<NewsHeadlines.NewsHealines>) {
+    fun updateData(newData: List<NewsHeadlines>) {
         headlines = newData
         notifyDataSetChanged()
     }
